@@ -45,27 +45,25 @@ let playerMove = getMoveName(playerInput);
 printMessage('Twój ruch to: ' + playerMove);
 
 function displayResult(computerMove, playerMove){
-  
-    if(computerMove == 'kamień' && playerMove == 'papier'){
-    return 'Ty wygrywasz';
+  if(computerMove == 'kamień' && playerMove == 'papier'){
+  return 'Ty wygrywasz.';
 } else if (computerMove == 'kamień' && playerMove == 'kamień') {
-  return 'Mamy remis';
-} else if (computerMove == 'kamień' && playerMove == 'nożyce') {
-  return 'Ja wygrywam';
+  return 'Mamy remis.';
 } else if (computerMove == 'papier' && playerMove == 'nożyce') {
-  return 'Ty wygrywasz';
-} else if (computerMove == 'papier' && playerMove == 'kamień') {
-  return 'Ja wygrywam';
+  return 'Ty wygrywasz.';
 } else if (computerMove == 'papier' && playerMove == 'papier') {
-  return 'Mamy remis';
+  return 'Mamy remis.';
 } else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
-  return 'Mamy remis';
+  return 'Mamy remis.';
 } else if (computerMove == 'nożyce' && playerMove == 'kamień') {
-  return 'Ty wygrywasz';
-} else if (computerMove == 'nożyce' && playerMove == 'papier') {
-  return 'Ja wygrywam';
+  return 'Ty wygrywasz.';
+} else {
+  return 'Ja wygrywam.';
 }
 }
+
+let gameresult =displayResult(computerMove, playerMove);
+printMessage('Ja zagrałem ' + computerMove + ', Ty zagrałeś '+ playerMove + '. Wynik gry: ' + gameresult);
 
 /*  if( computerMove == 'kamień' && playerMove == 'papier'){
   printMessage('Ty wygrywasz!')

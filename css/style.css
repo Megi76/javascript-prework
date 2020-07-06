@@ -1,12 +1,10 @@
 /*variables*/
-$text-main: 'Abril Fatface', sans-serif;
-$text-msg: 'Architects Daughter', cursive;
 section {
   padding: 10px 0;
 }
 
 .splash {
-  background-image: url('https://11points.com/wp-content/uploads/2011/01/rockpaperstrategy-1600.jpg');
+  background-image: url("https://11points.com/wp-content/uploads/2011/01/rockpaperstrategy-1600.jpg");
   background-size: contain;
   background-position: center;
   height: 400px;
@@ -17,18 +15,18 @@ section {
   font-size: 50px;
   padding-top: 10px;
   text-align: center;
-  font-family: $text-main;
+  font-family: "Abril Fatface", sans-serif;
 }
 
 .instruction {
   background-image: radial-gradient(circle, #99FF99, #009966);
 }
 
-.instruction p{
+.instruction p {
   color: black;
   text-align: center;
   font-size: 25px;
-  font-family: $text-main;
+  font-family: "Abril Fatface", sans-serif;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -39,31 +37,33 @@ section {
   padding: 10px 0;
   margin: 0 auto;
 }
+
 .container button {
   height: 80px;
   width: 120px;
   font-size: 25px;
   border-radius: 25px;
 }
+
 #play-rock {
-  background-image: url('https://images.pexels.com/photos/2363901/pexels-photo-2363901.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-image: url("https://images.pexels.com/photos/2363901/pexels-photo-2363901.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
   background-size: cover;
   color: white;
-  font-family: $text-main
+  font-family: "Abril Fatface", sans-serif;
 }
 
 #play-paper {
-  background-image: url('https://images.pexels.com/photos/2575379/pexels-photo-2575379.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-image: url("https://images.pexels.com/photos/2575379/pexels-photo-2575379.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
   background-size: cover;
   color: white;
-  font-family: $text-main
+  font-family: "Abril Fatface", sans-serif;
 }
 
 #play-scissors {
-  background-image: url('https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-image: url("https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
   background-size: cover;
   color: white;
-  font-family: $text-main
+  font-family: "Abril Fatface", sans-serif;
 }
 
 #messages {
@@ -72,7 +72,7 @@ section {
   height: 100px;
   text-align: center;
   font-size: 20px;
-  font-family: $text-msg;
+  font-family: "Architects Daughter", cursive;
 }
 
 #results {
@@ -81,7 +81,7 @@ section {
   height: 100px;
   text-align: center;
   font-size: 20px;
-  font-family: $text-msg;
+  font-family: "Architects Daughter", cursive;
 }
 
 #points {
@@ -90,6 +90,6 @@ section {
   height: 100px;
   text-align: center;
   font-size: 20px;
-  font-family: $text-msg;
-
+  font-family: "Architects Daughter", cursive;
 }
+/*# sourceMappingURL=style.css.map */

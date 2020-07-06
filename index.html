@@ -3,9 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link href='http://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext' rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+	<header class="splash">
+		<h1> Witaj w grze Papier, Kamień, Nożyce</h1>
+	</header>
+
+	<section class="instruction">
+		<p> Aby rozpocząć grę, <br> wybierz swój ruch i kliknij jeden z poniższych przycisków:</p>
+	</section>
+
 	<div class="container">
 		<div id="buttons">
 			<button id="play-rock">Kamień</button>
@@ -13,7 +24,12 @@
 			<button id="play-scissors">Nożyce</button>
 		</div>
 		<div id="messages"></div>
+
+		<div id="results"></div>
 	</div>
+
+
+
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>

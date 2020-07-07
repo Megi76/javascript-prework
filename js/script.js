@@ -30,55 +30,56 @@ function getMoveName(MoveId){
 
   printMessage('Twój ruch to: ' + playerMove);
 
+  let COMPUTER="Ja Wygrywam.";
+  let PLAYER="Ty wygrywasz.";
+  let DRAW="Mamy remis!";
+
   function displayResult(computerMove, playerMove){
       if(computerMove == 'kamień' && playerMove == 'papier'){
-      return 'Ty wygrywasz.';
+      return PLAYER;
     } else if (computerMove == 'kamień' && playerMove == 'kamień') {
-      return 'Mamy remis.';
+      return DRAW;
     } else if (computerMove == 'papier' && playerMove == 'nożyce') {
-      return 'Ty wygrywasz.';
+      return PLAYER;
     } else if (computerMove == 'papier' && playerMove == 'papier') {
-      return 'Mamy remis.';
+      return DRAW;
     } else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
-      return 'Mamy remis.';
+      return DRAW;
     } else if (computerMove == 'nożyce' && playerMove == 'kamień') {
-      return 'Ty wygrywasz.';
+      return PLAYER;
     } else {
-      return 'Ja wygrywam.';
+      return COMPUTER;
   }
   }
 
   let gameResult =displayResult(computerMove, playerMove);
   printMessage('Ja zagrałem ' + computerMove + ', Ty zagrałeś '+ playerMove + '. Wynik gry: ' + gameResult);
+  
+  let scoreComputer = 0;
+  let scorePlayer = 0;
+  
+  function scoreCalc(gameResult){
+    if (gameResult == COMPUTER){
+      scoreComputer +=1
+    }
+    else if (gameResult == PLAYER){
+      scorePlayer +=1
+    }}
+    
+    scoreCalc(gameResult);
+  
+  
+  document.getElementById('results').innerHTML = 'Mój wynik to: '+ scoreComputer + ' Twój wynik to: ' + scorePlayer;
+
 }
+  
   document.getElementById('play-rock').addEventListener('click', function(){
-  playGame(1);
+    playGame(1);
   });
   document.getElementById('play-paper').addEventListener('click', function(){
-  playGame(2);
+    playGame(2);
   });
   document.getElementById('play-scissors').addEventListener('click', function(){
-  playGame(3);
+    playGame(3);
   });
-
-
-  function computerPoints (gameResult){
-    if (gameResult == 'Ja wygrywam.'){
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-
-  function playerPoints (gameResult){
-    if (gameResult == 'Ty wygrywasz.'){
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-
-  let x = computerPoints(gameResult);
-  let y = playerPoints(gameResult);
-
-  document.getElementById('results').innerHTML = 'Mój wynik to: '+ x + ' Twój wynik to: ' + y;
+  

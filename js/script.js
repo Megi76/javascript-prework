@@ -19,13 +19,13 @@ function getMoveName(MoveId){
     }
   }
 
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
 
-  let computerMove = getMoveName(randomNumber);
+  const computerMove = getMoveName(randomNumber);
 
-  printMessage('Mój ruch to: ' + computerMove);
+  printMessage(`Mój ruch to: ${computerMove}`);
 
 /*  let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
 
@@ -33,11 +33,12 @@ function getMoveName(MoveId){
 
   let playerMove = getMoveName(playerInput);
 
-  printMessage('Twój ruch to: ' + playerMove);
+  printMessage(`Twój ruch to: ${playerMove}`);
 
-  let COMPUTER="Ja Wygrywam.";
-  let PLAYER="Ty wygrywasz.";
-  let DRAW="Mamy remis!";
+  const 
+  COMPUTER="Ja wygrywam.", 
+  PLAYER="Ty wygrywasz.", 
+  DRAW="Mamy remis!";
 
   function displayResult(computerMove, playerMove){
       if(computerMove == 'kamień' && playerMove == 'papier'){
@@ -57,8 +58,8 @@ function getMoveName(MoveId){
   }
   }
 
-  let gameResult =displayResult(computerMove, playerMove);
-  printMessage('Ja zagrałem ' + computerMove + ', Ty zagrałeś '+ playerMove + '. Wynik gry: ' + gameResult);
+  const gameResult =displayResult(computerMove, playerMove);
+  printMessage(`Ja zagrałem  ${computerMove} Ty zagrałeś ${playerMove}. Wynik gry: ${gameResult}`);
   
   
   function scoreCalc(gameResult){
@@ -71,10 +72,10 @@ function getMoveName(MoveId){
     
     scoreCalc(gameResult);
   
-  document.getElementById('results').innerHTML = 'Mój wynik to: '+ scoreComputer + ' Twój wynik to: ' + scorePlayer;
+  document.getElementById('results').innerHTML = `Moj wynik to: ${scoreComputer} - Twój wynik to: ${scorePlayer}`;
 
 }
-  
+
   document.getElementById('play-rock').addEventListener('click', function(){
     playGame(1);
   });
@@ -84,4 +85,3 @@ function getMoveName(MoveId){
   document.getElementById('play-scissors').addEventListener('click', function(){
     playGame(3);
   });
-  

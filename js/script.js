@@ -1,3 +1,8 @@
+
+let scoreComputer = 0;
+let scorePlayer = 0;
+
+
 function playGame(playerInput){
   clearMessages();
 
@@ -55,8 +60,6 @@ function getMoveName(MoveId){
   let gameResult =displayResult(computerMove, playerMove);
   printMessage('Ja zagrałem ' + computerMove + ', Ty zagrałeś '+ playerMove + '. Wynik gry: ' + gameResult);
   
-  let scoreComputer = 0;
-  let scorePlayer = 0;
   
   function scoreCalc(gameResult){
     if (gameResult == COMPUTER){
@@ -67,7 +70,6 @@ function getMoveName(MoveId){
     }}
     
     scoreCalc(gameResult);
-  
   
   document.getElementById('results').innerHTML = 'Mój wynik to: '+ scoreComputer + ' Twój wynik to: ' + scorePlayer;
 
